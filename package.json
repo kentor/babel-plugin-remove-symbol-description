@@ -1,0 +1,33 @@
+{
+  "name": "babel-plugin-remove-symbol-description",
+  "version": "0.0.1",
+  "description": "A Babel plugin to remove Symbol descriptions.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel -d dist index.js",
+    "prepublish": "npm run build",
+    "pretest": "npm run build",
+    "test": "mocha --compilers js:babel/register --reporter dot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kentor/babel-plugin-remove-symbol-description"
+  },
+  "keywords": [
+    "babel",
+    "babel-plugin",
+    "minification",
+    "symbol"
+  ],
+  "author": "Kenneth Chung <ken70r@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kentor/babel-plugin-remove-symbol-description/issues"
+  },
+  "homepage": "https://github.com/kentor/babel-plugin-remove-symbol-description",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "expect": "^1.9.0",
+    "mocha": "^2.3.0"
+  }
+}
