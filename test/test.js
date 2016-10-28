@@ -1,4 +1,4 @@
-const babel = require('babel');
+const babel = require('babel-core');
 const expect = require('expect');
 
 describe('babel-plugin-remove-symbol-description', () => {
@@ -11,7 +11,6 @@ describe('babel-plugin-remove-symbol-description', () => {
       plugins: [require('../dist/index')],
     });
     expect(code).toBe(
-      "'use strict';\n\n" +
       "parseInt('1');\n" +
       "Symbol();\n" +
       "var a = 'a';\n" +

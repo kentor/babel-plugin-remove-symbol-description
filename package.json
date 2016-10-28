@@ -7,7 +7,7 @@
     "build": "babel -d dist index.js",
     "prepublish": "npm run build",
     "pretest": "npm run build",
-    "test": "mocha --compilers js:babel/register --reporter dot"
+    "test": "mocha --compilers js:babel-register --reporter dot"
   },
   "repository": {
     "type": "git",
@@ -26,8 +26,11 @@
   },
   "homepage": "https://github.com/kentor/babel-plugin-remove-symbol-description",
   "devDependencies": {
-    "babel": "^5.8.23",
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-register": "^6.18.0",
     "expect": "^1.9.0",
-    "mocha": "^2.3.0"
+    "mocha": "^3.1.2"
   }
 }
