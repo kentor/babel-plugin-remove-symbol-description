@@ -2,6 +2,9 @@
 
 A [Babel][b] plugin to remove [Symbol][s] descriptions.
 
+**Note:** Babel 6 is supported in version 1.0+. Keep using version 0.0.1
+for Babel 5 support.
+
 ## What?
 
 In:
