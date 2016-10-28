@@ -6,15 +6,15 @@ describe('babel-plugin-remove-symbol-description', () => {
     const source = "parseInt('1');\n" +
                    "Symbol('test');\n" +
                    "var a = 'a';\n" +
-                   "Symbol(a);";
+                   'Symbol(a);';
     const { code } = babel.transform(source, {
       plugins: [require('../dist/index')],
     });
     expect(code).toBe(
       "parseInt('1');\n" +
-      "Symbol();\n" +
+      'Symbol();\n' +
       "var a = 'a';\n" +
-      "Symbol();"
+      'Symbol();'
     );
   });
 });
