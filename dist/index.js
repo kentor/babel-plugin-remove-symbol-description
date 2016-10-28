@@ -1,23 +1,14 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-
-exports['default'] = function (_ref) {
-  var Plugin = _ref.Plugin;
-  var t = _ref.types;
-
-  return new Plugin('remove-symbol-description', {
+module.exports = function () {
+  return {
     visitor: {
-      CallExpression: function CallExpression(node, parent) {
-        if (node.callee.name === 'Symbol') {
-          node.arguments = [];
+      CallExpression: function CallExpression(path) {
+        var calleePath = path.get("callee");
+        if (calleePath.node.name === 'Symbol') {
+          calleePath.parent.arguments = [];
         }
-        return node;
       }
     }
-  });
+  };
 };
-
-module.exports = exports['default'];

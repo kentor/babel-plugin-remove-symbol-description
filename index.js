@@ -1,12 +1,13 @@
-export default function ({ Plugin, types: t }) {
-  return new Plugin('remove-symbol-description', {
+'use strict';
+module.exports = function () {
+  return {
     visitor: {
-      CallExpression: function (node, parent) {
-        if (node.callee.name === 'Symbol') {
-          node.arguments = [];
+      CallExpression(path) {
+        const calleePath = path.get("callee");
+        if (calleePath.node.name === 'Symbol') {
+          calleePath.parent.arguments = [];
         }
-        return node;
       }
     }
-  });
-}
+  };
+};
