@@ -1,4 +1,6 @@
-# Remove Symbol Description [![Build Status](https://travis-ci.org/kentor/babel-plugin-remove-symbol-description.svg)](https://travis-ci.org/kentor/babel-plugin-remove-symbol-description)
+# Remove Symbol Description
+
+[![Build Status](https://travis-ci.org/kentor/babel-plugin-remove-symbol-description.svg)](https://travis-ci.org/kentor/babel-plugin-remove-symbol-description) [![npm](https://img.shields.io/npm/v/babel-plugin-remove-symbol-description.svg)](https://www.npmjs.com/package/babel-plugin-remove-symbol-description)
 
 A [Babel][b] plugin to remove [Symbol][s] descriptions.
 
